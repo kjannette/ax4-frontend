@@ -1,0 +1,24 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #05060a 0%, #0c111d 100%);
+  color: #f4f6fb;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem clamp(1rem, 5vw, 4rem);
+}
+
+.page-heading {
+  margin-bottom: 1.5rem;
+}
+
+.section-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}

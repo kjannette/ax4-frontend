@@ -1,0 +1,56 @@
+.nav-shell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem clamp(1rem, 5vw, 4rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(5, 6, 10, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(18px);
+}
+
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.nav-logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+}
+
+.nav-subtitle {
+  font-size: 0.75rem;
+  opacity: 0.65;
+  letter-spacing: 0.06em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link-active {
+  color: #050302;
+  background: #76e4f7;
+  font-weight: 600;
+}
+
