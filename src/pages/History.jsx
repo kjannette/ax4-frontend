@@ -28,8 +28,7 @@ function History() {
         <p className="eyebrow">Coming soon</p>
         <h1>Recent Sessions</h1>
         <p className="muted">
-          A timeline of completed route explorations will appear here. Use this space to
-          audit internal flows and keep tabs on cross-chain activity.
+          A timeline of completed route explorations
         </p>
       </header>
 
