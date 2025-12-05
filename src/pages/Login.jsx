@@ -22,10 +22,6 @@ function Login() {
     <section className="login-page">
       <div className="section-card login-card">
         <h1>Sign in</h1>
-        <p className="muted">
-          Authentication and workspace roles are on the roadmap. This placeholder demonstrates
-          the future flow.
-        </p>
 
         <form onSubmit={handleSubmit}>
           <label htmlFor="username">Username</label>
