@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <header className="nav-shell">
       <div className="nav-brand">
-        <span className="nav-logo">Hydra</span>
+        <span className="nav-logo">Chirper</span>
         <span className="nav-subtitle">Bridge Finder</span>
       </div>
 
