@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Branch with leaf -->
+  <line x1="8" y1="52" x2="56" y2="52" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="52" cy="58" rx="4" ry="5" fill="#90EE90" stroke="#000" stroke-width="2"/>
+  
+  <!-- Pink tail -->
+  <path d="M8 42 L4 52 L10 50 L12 44 Z" fill="#FFB6D9" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  
+  <!-- Blue wing -->
+  <path d="M12 20 L8 38 L20 42 L22 32 L18 24 Z" fill="#87CEEB" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M16 26 L14 34 L20 36 Z" fill="#B0E0E6" stroke="none"/>
+  
+  <!-- Yellow body -->
+  <ellipse cx="30" cy="28" rx="16" ry="18" fill="#FFD966" stroke="#000" stroke-width="2.5"/>
+  
+  <!-- Head bump -->
+  <path d="M42 16 Q46 14 48 18" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Eye -->
+  <circle cx="36" cy="20" r="2.5" fill="#000"/>
+  
+  <!-- Chest dots -->
+  <circle cx="28" cy="36" r="2" fill="#000"/>
+  <circle cx="32" cy="42" r="2" fill="#000"/>
+  
+  <!-- Feet -->
+  <line x1="26" y1="46" x2="26" y2="52" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="34" y1="46" x2="34" y2="52" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M22 52 L26 52 L28 54" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M30 52 L34 52 L36 54" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>
+

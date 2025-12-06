@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useFindRoutes } from '../api';
+import RouteDetailsModal from '../components/RouteDetailsModal';
 import './RouteFinder.css';
 
 const CHAIN_OPTIONS = [
@@ -89,6 +90,8 @@ function RouteFinder() {
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [preferences, setPreferences] = useState(() => loadPreferences());
   const [prefMessage, setPrefMessage] = useState('');
+  const [selectedRoute, setSelectedRoute] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   // React Query mutation for finding routes
   const findRoutes = useFindRoutes();
@@ -137,6 +140,7 @@ function RouteFinder() {
       amount: toBaseUnits(form.amount, selectedToken?.decimals),
       fromAddress: form.fromAddress || undefined,
       toAddress: form.toAddress || undefined,
+      gasPreference: form.gasPreference,
     });
   };
 
@@ -158,6 +162,16 @@ function RouteFinder() {
       ...prev,
       ...preferences,
     }));
+  };
+
+  const handleViewDetails = (route) => {
+    setSelectedRoute(route);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedRoute(null);
   };
 
   // Get routes from mutation result
@@ -347,8 +361,11 @@ function RouteFinder() {
           <header className="results-header">
             <h2>Best options</h2>
             <p className="muted">
-              Sorted by our scoring model (fees, speed, and final output). Gas cost uses your
-              selected preference.
+              Sorted by your gas preference. Routes are ranked based on {
+                form.gasPreference === 'eco' ? 'lowest fees' :
+                form.gasPreference === 'fast' ? 'fastest transfer time' :
+                'balanced fees, speed, and output'
+              }.
             </p>
           </header>
 
@@ -402,7 +419,7 @@ function RouteFinder() {
                   <strong>
                     {route.route?.estimate?.gasCosts?.total ||
                       route.route?.estimate?.gasCosts?.usd ||
-                      'Auto'}
+                      form.gasPreference.charAt(0).toUpperCase() + form.gasPreference.slice(1)}
                   </strong>
                 </div>
 
@@ -418,7 +435,11 @@ function RouteFinder() {
                   <button type="button" className="primary ghost" disabled>
                     Simulate transfer
                   </button>
-                  <button type="button" className="ghost" disabled>
+                  <button 
+                    type="button" 
+                    className="ghost" 
+                    onClick={() => handleViewDetails(route)}
+                  >
                     View details
                   </button>
                 </div>
@@ -427,6 +448,13 @@ function RouteFinder() {
           </div>
         </section>
       </div>
+
+      <RouteDetailsModal
+        route={selectedRoute}
+        tokenSymbol={form.tokenSymbol}
+        isOpen={showModal}
+        onClose={handleCloseModal}
+      />
     </section>
   );
 }
