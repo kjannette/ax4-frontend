@@ -127,6 +127,7 @@
 
 .results-header h2 {
   margin-bottom: 0.35rem;
+  margin-top: -15px;
 }
 
 .route-list {

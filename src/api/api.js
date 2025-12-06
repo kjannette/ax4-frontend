@@ -3,7 +3,10 @@
  * Uses native fetch - designed to work with React Query
  */
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// In production, use relative URLs (nginx proxies /api to backend)
+// In development, use localhost:3001
+const API_BASE_URL = import.meta.env.VITE_API_URL || 
+  (import.meta.env.MODE === 'production' ? '' : 'http://localhost:3001');
 
 /**
  * Custom error class for API errors
