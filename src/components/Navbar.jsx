@@ -12,7 +12,17 @@ function Navbar() {
     <header className="nav-shell">
       <div className="nav-brand">
         <span className="nav-logo">Chirper</span>
-        <span className="nav-subtitle">Bridge Finder</span>
+        <span className="nav-subtitle">
+          Bridge Finder By{' '}
+          <a href="https://www.sjdev.co" target="_blank" rel="noopener">
+            sjDev.co
+          </a>
+          {' '}- Sophisticated{' '}
+          <a href="https://sjdev.co/blockchain" target="_blank" rel="noopener">
+            Blockchain Engineers
+          </a>
+          ; Cryptophunk Travelers
+        </span>
       </div>
 
       <nav className="nav-links">

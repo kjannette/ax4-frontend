@@ -30,6 +30,17 @@
   letter-spacing: 0.06em;
 }
 
+.nav-subtitle a {
+  color: var(--accent, #00d4ff);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.nav-subtitle a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 .nav-links {
   display: flex;
   gap: 1rem;
