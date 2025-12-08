@@ -17,11 +17,11 @@ function Navbar() {
           <a href="https://www.sjdev.co" target="_blank" rel="noopener">
             sjDev.co
           </a>
-          {' '}- Sophisticated{' '}
+    
           <a href="https://sjdev.co/blockchain" target="_blank" rel="noopener">
-            Blockchain Engineers
+            {`${' '}Blockchain Engineers`}
           </a>
-          ; Cryptophunk Travelers
+          : Cryptophunk Travelers
         </span>
       </div>
 
